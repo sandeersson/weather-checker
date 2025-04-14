@@ -22,9 +22,25 @@ public class WeatherSummary {
         // Hint: use Scanner. nextDouble() and hasNextDouble() will be helpful here!
         Scanner scanner = new Scanner(System.in);
 
-        while (scanner.hasNextDouble()) {
+        /** while (scanner.hasNextDouble()) {
             double temp = scanner.nextDouble();
             System.out.println(temp);
+        } **/
+
+        double temp = scanner.nextDouble();
+        double max = temp;
+        double min = temp;
+
+        while (scanner.hasNextDouble()) {
+            temp = scanner.nextDouble();
+            if (temp > max) {
+                max = temp;
+            }
+            if (temp < min) {
+                min = temp;
+            }
         }
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
     }
 }
